@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+Files Excluded
+*.xml
+*.iml
+
+Files Included
+!pom.xml
+!gmaps.iml
+
+Folders Excluded
+.idea/*
+target/*
+!/.git/info/exclude
+!/.gitignore
+
