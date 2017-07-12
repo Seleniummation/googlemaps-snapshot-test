@@ -16,7 +16,7 @@ public class LandingPg extends BaseUtil {
     private BaseUtil base;
     private static By textFld = By.id("searchboxinput");
     private static By location = By.cssSelector(".section-hero-header-title");
-    private By searchButton = By.cssSelector("#searchbox-searchbuttons");
+    private By searchButton = By.cssSelector("#searchbox-searchbutton");
 
     public LandingPg(BaseUtil base) {
         this.base = base;
