@@ -8,6 +8,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.LandingPg;
@@ -18,28 +19,24 @@ import static org.junit.Assert.assertEquals;
 public class Search extends BaseUtil{
 
     private BaseUtil base;
-    private WebElement textFld;
-    private WebElement searchBtn;
-    private WebElement location;
-
 
     public Search(BaseUtil base) {
         this.base = base;
     }
 
+
     @Given("^I am on landing page of google maps$")
     public void iAmOnLandingPageOfGoogleMapsPage() throws Throwable {
 
-        base.driver.navigate().to("https://www.google.co.uk/maps");
-
-
+        LandingPg onLandingPage = new LandingPg(base);
+        onLandingPage.ofGoogleMaps();
     }
 
     @And("^I enter \"([^\"]*)\" into search text field$")
-    public void iEnterTheIntoSearchTextField(String locations) throws Throwable {
+    public void iEnterTheIntoSearchTextField(String location) throws Throwable {
 
         LandingPg onLandingPage = new LandingPg(base);
-        onLandingPage.setLocation(locations);
+        onLandingPage.setLocation(location);
 
     }
 
@@ -51,14 +48,14 @@ public class Search extends BaseUtil{
 
     }
 
-    @Then("^Selected locality is displayed$")
-    public void selectedLocalityIsDisplayed() throws Throwable {
+    @Then("^Selected locality is displayed as \"([^\"]*)\"$")
+    public void selectedLocalityIsDisplayed(String expected) throws Throwable {
 
         LandingPg onLandingPage = new LandingPg(base);
         onLandingPage.getLocation();
 
-        String locality = onLandingPage.getLocation();
-        assertEquals(locality,onLandingPage.getLocation());
+        expected = onLandingPage.getLocation();
+        assertEquals(expected,onLandingPage.getLocation());
 
     }
 }

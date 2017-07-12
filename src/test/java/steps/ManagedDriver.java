@@ -5,6 +5,8 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.apache.commons.io.FileUtils;
+import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,18 +22,17 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-public class Managed_Driver extends BaseUtil {
+public class ManagedDriver extends BaseUtil {
 
     private BaseUtil base;
 
 
-    public Managed_Driver(BaseUtil base) {
+    public ManagedDriver(BaseUtil base) {
         this.base = base;
     }
 
     @Before()
     public void initializeTest() throws IOException {
-
 
         Properties p = new Properties();
         FileInputStream fi = new FileInputStream("src//main//resources//global.properties");
@@ -61,6 +62,8 @@ public class Managed_Driver extends BaseUtil {
             base.driver = new ChromeDriver();
 
         }
+
+
 
     }
 

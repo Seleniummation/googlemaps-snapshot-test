@@ -4,6 +4,7 @@ import base.BaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -13,43 +14,32 @@ import static org.junit.Assert.assertEquals;
 public class LandingPg extends BaseUtil {
 
     private BaseUtil base;
-    private WebElement textFld;
-    private WebElement searchBtn;
-    private WebElement location;
-
-
+    private static By textFld = By.id("searchboxinput");
+    private static By location = By.cssSelector(".section-hero-header-title");
+    private By searchButton = By.cssSelector("#searchbox-searchbuttons");
 
     public LandingPg(BaseUtil base) {
         this.base = base;
     }
 
-
-    public LandingPg(WebDriver driver) {
-        super();
-    }
-
-
-
+    public void ofGoogleMaps(){
+        base.driver.navigate().to("https://www.google.co.uk/maps");}
+    
     public void setLocation(String locations) {
 
-        new WebDriverWait(base.driver, 80).until(ExpectedConditions.titleIs("Google Maps"));
-        textFld = base.driver.findElement(By.id("searchboxinput"));
-        textFld.clear();
-        textFld.sendKeys(locations);
+        base.driver.findElement(textFld).sendKeys(locations);
+
     }
 
     public void clickSearch() {
 
-        new WebDriverWait(base.driver, 80).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#searchbox-searchbutton"))).click();
-        //searchBtn = base.driver.findElement(By.cssSelector("#searchbox-searchbutton"));
-        //searchBtn.click();
+        new WebDriverWait(base.driver, 80).until(ExpectedConditions.presenceOfElementLocated(searchButton)).click();
     }
 
     public String getLocation() {
 
-        new WebDriverWait(base.driver, 250).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".section-hero-header-title")));
-        location = base.driver.findElement(By.cssSelector(".section-hero-header-title"));
-        location.getText();
+        new WebDriverWait(base.driver, 250).until(ExpectedConditions.presenceOfElementLocated(location));
+        base.driver.findElement(location).getText();
 
         //System.out.println("Location is set as " + location.getText() );
         return null;
