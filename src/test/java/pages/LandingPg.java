@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -23,7 +25,11 @@ public class LandingPg extends BaseUtil {
     }
 
     public void ofGoogleMaps(){
-        base.driver.navigate().to("https://www.google.co.uk/maps");}
+        base.driver.navigate().to("https://www.google.co.uk/maps");
+
+        base.driver.manage().timeouts().implicitlyWait(250, TimeUnit.SECONDS);
+
+    }
     
     public void setLocation(String locations) {
 
@@ -33,12 +39,12 @@ public class LandingPg extends BaseUtil {
 
     public void clickSearch() {
 
-        new WebDriverWait(base.driver, 80).until(ExpectedConditions.presenceOfElementLocated(searchButton)).click();
+        base.driver.findElement(searchButton).click();
     }
+
 
     public String getLocation() {
 
-        new WebDriverWait(base.driver, 250).until(ExpectedConditions.presenceOfElementLocated(location));
         base.driver.findElement(location).getText();
 
         //System.out.println("Location is set as " + location.getText() );

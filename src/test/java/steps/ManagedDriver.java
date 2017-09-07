@@ -4,6 +4,8 @@ import base.BaseUtil;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.runtime.model.CucumberFeature;
+import gherkin.formatter.model.Tag;
 import org.apache.commons.io.FileUtils;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
@@ -19,13 +21,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 
 public class ManagedDriver extends BaseUtil {
 
     private BaseUtil base;
-
 
     public ManagedDriver(BaseUtil base) {
         this.base = base;
@@ -79,15 +81,21 @@ public class ManagedDriver extends BaseUtil {
 
         if (scenario.isFailed()) {
 
-           File screenshot =((TakesScreenshot)base.driver).getScreenshotAs(OutputType.FILE);
-           FileUtils.copyFile(screenshot, new File("C:\\Test Environment\\Images\\screen.png"));
+            File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
+            FileUtils.copyFile( screenshot, new File( "C:\\Test Environment\\Images\\screen.png" ) );
 
         }
-
-
         base.driver.close();
     }
 
+    private void addFeatureTag(List<CucumberFeature> cucumberFeatures) {
+        final String tagToAdd = System.getProperty( "dynamic.feature.tag.add", "" );
+        if (!tagToAdd.isEmpty()) {
+            for (CucumberFeature cucumberFeature : cucumberFeatures) {
+                cucumberFeature.getGherkinFeature().getTags().add( new Tag( tagToAdd, 0 ) );
+            }
 
+        }
+    }
 }
 
