@@ -52,7 +52,7 @@
 
     <profiles>
         <profile>
-            <id>regression</id>
+            <id>acceptance</id>
             <build>
                 <plugins>
                     <plugin>
