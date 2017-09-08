@@ -76,7 +76,7 @@
             </build>
         </profile>
         <profile>
-            <id>sanity</id>
+            <id>regression</id>
             <build>
                 <plugins>
                     <plugin>

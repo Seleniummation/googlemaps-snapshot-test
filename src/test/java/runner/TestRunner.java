@@ -10,13 +10,15 @@ import org.junit.runner.RunWith;
 
 
         format = {"json:target/cucumber.json", "html:target/site/cucumber-pretty"},
-        glue="steps",
+        glue="steps"
 
          //Negation symbol excludes regression tagged scenarios during runtime execution
-        tags = "~@regression"
+        //tags = "~@regression"
 
-        //AND operator executes scenarios within multiple tags
-        //tags =  {"@acceptance", "~@regression"}
+        //AND operator executes scenarios with multiple tags
+        //tags =  {"@acceptance", "@regression"}
+
+
 
         //tags =  "@sanity"
 
