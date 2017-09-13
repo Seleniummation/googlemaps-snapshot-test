@@ -1,6 +1,6 @@
 Feature: Google Search
 
-  #@acceptance #@regression
+
   Scenario Outline: Search for multiple locations on google maps
     Given I am on landing page of google maps
     And I enter "<location>" into search text field
