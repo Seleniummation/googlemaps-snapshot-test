@@ -14,7 +14,7 @@ Feature: Google Search
       | Hereford  | Hereford  |
 
 
-  @regression
+  #@regression
     Examples:
       | location  | expected  |
       | Reading   | Reading   |
