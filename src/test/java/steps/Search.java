@@ -1,10 +1,12 @@
 package steps;
 
 import base.BaseUtil;
+import cucumber.api.Scenario;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Test;
 import pages.LandingPg;
 
 import static org.junit.Assert.assertEquals;
@@ -18,8 +20,11 @@ public class Search {
         this.base = base;
     }
 
+
+
     @Given("^I am on landing page of google maps")
     public void onLandingPageOfGoogleMaps() throws Throwable {
+
 
         LandingPg onLandingPage = new LandingPg(base);
         onLandingPage.ofGoogleMaps();

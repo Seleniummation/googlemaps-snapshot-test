@@ -7,6 +7,7 @@ import cucumber.api.java.Before;
 import cucumber.runtime.model.CucumberFeature;
 import gherkin.formatter.model.Tag;
 import org.apache.commons.io.FileUtils;
+import org.junit.Test;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -41,6 +42,8 @@ public class ManagedDriver extends BaseUtil {
         p.load(fi);
         p.getProperty("browser");
 
+
+
         if (p.getProperty("browser").contains("firefox")) {
 
 
@@ -54,16 +57,17 @@ public class ManagedDriver extends BaseUtil {
             System.setProperty("webdriver.ie.driver", "src\\test\\java\\browsers\\IEDriverServer.exe");
             base.driver = new InternetExplorerDriver();
 
-        } else if (p.getProperty("browser").contains("chrome"))
+        } else if (p.getProperty("browser" ).contains("chrome"))
 
         {
 
             System.setProperty("webdriver.chrome.driver", "src\\test\\java\\browsers\\chromedriver.exe");
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--disable-extensions");
+            //ChromeOptions options = new ChromeOptions();
+            //options.addArguments("--disable-extensions");
             base.driver = new ChromeDriver();
 
         }
+
 
 
 
@@ -97,5 +101,7 @@ public class ManagedDriver extends BaseUtil {
 
         }
     }
+
+
 }
 
