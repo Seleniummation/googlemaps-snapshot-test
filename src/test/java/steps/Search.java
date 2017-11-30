@@ -12,7 +12,7 @@ import pages.LandingPg;
 import static org.junit.Assert.assertEquals;
 
 
-public class Search {
+public class Search extends BaseUtil{
 
     private BaseUtil base;
 

@@ -1,12 +1,13 @@
 package steps;
 
 import base.BaseUtil;
+import com.sun.jna.platform.FileUtils;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.runtime.model.CucumberFeature;
 import gherkin.formatter.model.Tag;
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
@@ -44,40 +45,32 @@ public class ManagedDriver extends BaseUtil {
 
 
 
+
         if (p.getProperty("browser").contains("firefox")) {
 
 
-            System.setProperty("webdriver.gecko.driver", "src\\test\\java\\browsers\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "src//test//java//browsers//geckodriver.exe");
             base.driver = new FirefoxDriver();
 
         } else if (p.getProperty("browser").contains("ie"))
 
         {
 
-            System.setProperty("webdriver.ie.driver", "src\\test\\java\\browsers\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "src//test//java//IEDriverServer.exe");
             base.driver = new InternetExplorerDriver();
 
         } else if (p.getProperty("browser" ).contains("chrome"))
 
         {
 
-            System.setProperty("webdriver.chrome.driver", "src\\test\\java\\browsers\\chromedriver.exe");
-            //ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--disable-extensions");
+            System.setProperty("webdriver.chrome.driver", "src//test//java//browsers//chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-extensions");
             base.driver = new ChromeDriver();
 
         }
 
-
-
-
     }
-
-
-
-
-
-
 
 
     @After()
@@ -85,8 +78,8 @@ public class ManagedDriver extends BaseUtil {
 
         if (scenario.isFailed()) {
 
-            File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
-            FileUtils.copyFile( screenshot, new File( "C:\\Test Environment\\Images\\screen.png" ) );
+           //File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
+            //FileUtils.copyFile( screenshot, new File( "C:\\Test Environment\\Images\\screen.png" ) );
 
         }
         base.driver.close();
