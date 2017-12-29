@@ -78,7 +78,7 @@ public class ManagedDriver extends BaseUtil {
 
         if (scenario.isFailed()) {
 
-           //File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
+          // File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
             //FileUtils.copyFile( screenshot, new File( "C:\\Test Environment\\Images\\screen.png" ) );
 
         }

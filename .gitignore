@@ -6,10 +6,10 @@ Files Excluded
 Files Included
 !pom.xml
 !gmaps.iml
+target
 
 Folders Excluded
 .idea/*
-target/*
 !/.git/info/exclude
 !/.gitignore
 

@@ -1,0 +1,208 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3718061171,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ManagedDriver.initializeTest()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Search for multiple locations on google maps",
+        "description": "",
+        "id": "google-search;search-for-multiple-locations-on-google-maps;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2444005516,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ManagedDriver.tearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9145391647,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on landing page of google maps",
+            "match": {
+              "location": "Search.onLandingPageOfGoogleMaps()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 353492907,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"Bristol\" into search text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bristol",
+                  "offset": 9
+                }
+              ],
+              "location": "Search.enterKeywordIntoSearchTextField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136685731,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click search",
+            "match": {
+              "location": "Search.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21685546231,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Selected locality is displayed as \"Bristol\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bristol",
+                  "offset": 35
+                }
+              ],
+              "location": "Search.selectedLocalityIsDisplayed(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2771756128,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ManagedDriver.initializeTest()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Search for multiple locations on google maps",
+        "description": "",
+        "id": "google-search;search-for-multiple-locations-on-google-maps;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2100031858,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ManagedDriver.tearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10186080969,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on landing page of google maps",
+            "match": {
+              "location": "Search.onLandingPageOfGoogleMaps()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1845737805,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter \"Hereford\" into search text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hereford",
+                  "offset": 9
+                }
+              ],
+              "location": "Search.enterKeywordIntoSearchTextField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 182737410,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click search",
+            "match": {
+              "location": "Search.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16524843223,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Selected locality is displayed as \"Hereford\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hereford",
+                  "offset": 35
+                }
+              ],
+              "location": "Search.selectedLocalityIsDisplayed(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Google Search",
+    "description": "",
+    "id": "google-search",
+    "keyword": "Feature",
+    "uri": "gsearch.feature"
+  }
+]
