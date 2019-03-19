@@ -30,6 +30,7 @@ import java.util.Properties;
 public class ManagedDriver extends BaseUtil {
 
     private BaseUtil base;
+    private TakesScreenshot webDriver;
 
     public ManagedDriver(BaseUtil base) {
         this.base = base;
@@ -78,7 +79,10 @@ public class ManagedDriver extends BaseUtil {
 
         if (scenario.isFailed()) {
 
-          // File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
+            byte[] screenshot = webDriver.getScreenshotAs( OutputType.BYTES);
+            scenario.embed(screenshot, "image/png");
+
+          //File screenshot = ((TakesScreenshot) base.driver).getScreenshotAs( OutputType.FILE );
             //FileUtils.copyFile( screenshot, new File( "C:\\Test Environment\\Images\\screen.png" ) );
 
         }
