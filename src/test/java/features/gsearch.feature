@@ -26,8 +26,8 @@ Feature: Google Search
 
   Scenario : Search for singles locations on google maps
     Given I am on landing page of google maps
-
-
+    When i go go gogit flo
+    And He also came
 
 
 
