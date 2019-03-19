@@ -24,11 +24,9 @@ Feature: Google Search
 
 
 
-  Scenario : Search for single locations on google maps
+  Scenario : Search for singles locations on google maps
     Given I am on landing page of google maps
-    And I enter "<no location>" into search text field
-    When I click search
-    Then Selected locality is displayed as "<expected>"
+
 
 
 
