@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3718061171,
+              "duration": 5217307300,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 2444005516,
+              "duration": 2321216000,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9145391647,
+              "duration": 1187386400,
               "status": "passed"
             },
             "line": 6,
@@ -46,8 +46,9 @@
           },
           {
             "result": {
-              "duration": 353492907,
-              "status": "passed"
+              "duration": 1378769300,
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: call function result missing \u0027value\u0027\n  (Session info: chrome\u003d73.0.3683.103)\n  (Driver info: chromedriver\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform\u003dWindows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027SJA-LPT005855\u0027, ip: \u0027192.168.104.120\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\\Users\\OLA~1.EMM\\AppData\\...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.103, webStorageEnabled: true}\nSession ID: 47bf5d9fe69bf030e773c9a4a36647c0\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)\r\n\tat pages.LandingPg.setLocation(LandingPg.java:36)\r\n\tat steps.Search.enterKeywordIntoSearchTextField(Search.java:37)\r\n\tat ✽.And I enter \"Bristol\" into search text field(gsearch.feature:7)\r\n",
+              "status": "failed"
             },
             "line": 7,
             "name": "I enter \"Bristol\" into search text field",
@@ -67,8 +68,7 @@
           },
           {
             "result": {
-              "duration": 136685731,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "I click search",
@@ -79,8 +79,7 @@
           },
           {
             "result": {
-              "duration": 21685546231,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "Selected locality is displayed as \"Bristol\"",
@@ -104,7 +103,7 @@
         "before": [
           {
             "result": {
-              "duration": 2771756128,
+              "duration": 2703523000,
               "status": "passed"
             },
             "match": {
@@ -119,7 +118,7 @@
         "after": [
           {
             "result": {
-              "duration": 2100031858,
+              "duration": 2271368500,
               "status": "passed"
             },
             "match": {
@@ -132,7 +131,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10186080969,
+              "duration": 1508900200,
               "status": "passed"
             },
             "line": 6,
@@ -144,8 +143,9 @@
           },
           {
             "result": {
-              "duration": 1845737805,
-              "status": "passed"
+              "duration": 1009661700,
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: call function result missing \u0027value\u0027\n  (Session info: chrome\u003d73.0.3683.103)\n  (Driver info: chromedriver\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform\u003dWindows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027SJA-LPT005855\u0027, ip: \u0027192.168.104.120\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\\Users\\OLA~1.EMM\\AppData\\...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.103, webStorageEnabled: true}\nSession ID: 465a79614992a510dd8aaf47796c0ca0\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)\r\n\tat pages.LandingPg.setLocation(LandingPg.java:36)\r\n\tat steps.Search.enterKeywordIntoSearchTextField(Search.java:37)\r\n\tat ✽.And I enter \"Hereford\" into search text field(gsearch.feature:7)\r\n",
+              "status": "failed"
             },
             "line": 7,
             "name": "I enter \"Hereford\" into search text field",
@@ -165,8 +165,7 @@
           },
           {
             "result": {
-              "duration": 182737410,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "I click search",
@@ -177,8 +176,7 @@
           },
           {
             "result": {
-              "duration": 16524843223,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "Selected locality is displayed as \"Hereford\"",
