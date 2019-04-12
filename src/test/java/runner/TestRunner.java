@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         //tags = "~@regression"
 
         //AND operator executes scenarios with multiple tags
-        tags =  "@regression"
+        tags =  "@unit"
 
 
 
