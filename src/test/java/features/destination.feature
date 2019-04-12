@@ -9,7 +9,7 @@ Feature: My Destination
     Then Selected locality is displayed as "<expected>"
 
 
-  @regression
+  @regression  @sanity
     Examples:
       | location  | expected  |
       | Reading   | Reading   |

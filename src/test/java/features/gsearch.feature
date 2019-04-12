@@ -14,8 +14,9 @@ Feature: Google Search
       | Hereford  | Hereford  |
 
 
-  @unitTest
+  @endtoend
     Examples:
       | location  | expected  |
-      | Reading   | Reading   |
-      | Brentford | Brentford |
+     #| Reading   | Reading   |
+      #| Brentford | Brentford |
+      | Farringdon | Farringdon  |
