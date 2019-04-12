@@ -14,7 +14,7 @@ Feature: Google Search
       | Hereford  | Hereford  |
 
 
-  @unit
+  @unitTest
     Examples:
       | location  | expected  |
       | Reading   | Reading   |
