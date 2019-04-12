@@ -51,9 +51,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
+                1,
+                1,
                 2,
-                2,
-                4,
                 0,
                 0
             ],
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 4) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -108,7 +108,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                 0,
-                2
+                1
             ],
             backgroundColor: [
                 "#00B000",
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -232,9 +232,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>googleMaps</td>
+      <td>Today</td>
               <td>1</td>
-            <td>11 Apr 2019, 11:50</td>
+            <td>12 Apr 2019, 09:28</td>
     </tr>
   </tbody>
 </table>
@@ -329,20 +329,20 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_gsearch-feature.html">Google Search</a></td>
+        <td class="tagname"><a href="report-feature_destination-feature.html">My Destination</a></td>
         
-        <td      class="passed"    >2</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >4</td>
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td class="total">4</td>
 
         <td >0</td>
-        <td  class="failed"    >2</td>
-        <td class="total">2</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
 
-        <td class="duration" data-value="5084717600">5s 084ms</td>
+        <td class="duration" data-value="2490556500">2s 490ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
@@ -350,18 +350,18 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-            <td>2</td>
+            <td>1</td>
+      <td>1</td>
       <td>2</td>
+      <td>0</td>
+      <td>0</td>
       <td>4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8</td>
 
       <td>0</td>
-      <td>2</td>
-      <td>2</td>
+      <td>1</td>
+      <td>1</td>
 
-      <td class="duration">5s 084ms</td>
+      <td class="duration">2s 490ms</td>
       <td>1</td>
     </tr>
     <tr>
