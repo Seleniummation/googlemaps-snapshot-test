@@ -8,14 +8,14 @@ Feature: Google Search
     When I click search
     Then Selected locality is displayed as "<expected>"
 
-    @acceptance
+    @unit
     Examples:
       | location  | expected  |
       | Bristol   | Bristol   |
       | Hereford  | Hereford  |
 
 
-  @regression
+  @unit
     Examples:
       | location  | expected  |
       | Reading   | Reading   |
